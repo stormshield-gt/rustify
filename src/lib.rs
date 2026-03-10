@@ -194,7 +194,7 @@
 //! The following features are available for this crate:
 //!
 //! * `blocking`: Enables the blocking variants of `Client`s as well as the blocking
-//!    `exec()` functions in `Endpoint`s.
+//!   `exec()` functions in `Endpoint`s.
 //!
 //! ## Error Handling
 //!
