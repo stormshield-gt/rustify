@@ -4,7 +4,7 @@ warning: unused import: `rustify::endpoint::Endpoint`
 1 | use rustify::endpoint::Endpoint;
   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
   |
-  = note: `#[warn(unused_imports)]` on by default
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
 
 error[E0599]: no variant or associated item named `TEST` found for enum `RequestMethod` in the current scope
  --> tests/macro/invalid_method.rs:6:41

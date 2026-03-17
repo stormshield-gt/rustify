@@ -239,7 +239,7 @@ pub trait Endpoint: Send + Sync + Sized {
         Ok(EndpointResult::new(resp, Self::RESPONSE_BODY_TYPE))
     }
 
-    fn with_middleware<M: MiddleWare>(self, middleware: &M) -> MutatedEndpoint<Self, M> {
+    fn with_middleware<M: MiddleWare>(self, middleware: &M) -> MutatedEndpoint<'_, Self, M> {
         MutatedEndpoint::new(self, middleware)
     }
 

@@ -13,9 +13,11 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [features]
-default = ["reqwest/default-tls"]
+default = ["rustls"]
+rustls = ["reqwest/rustls"]
 blocking = ["reqwest/blocking"]
-rustls-tls = ["reqwest/rustls-tls"]
+native-tls = ["reqwest/native-tls"]
+rustls-no-provider = ["reqwest/rustls-no-provider"]
 
 [workspace]
 members = [
@@ -27,7 +29,7 @@ anyhow = "1.0.56"
 async-trait = "0.1.52"
 bytes = "1.1.0"
 http = "1"
-reqwest = { version = "0.12.2", default-features = false, optional = true }
+reqwest = { version = "0.13.0", default-features = false }
 rustify_derive = { version = "0.5.4", path = "rustify_derive" }
 serde = { version = "1.0.136", features = ["derive"] }
 serde_json = "1.0.79"
