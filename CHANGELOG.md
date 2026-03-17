@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-03-17
+
+### Added
+
+- `native-tls` feature that enable TLS functionality provided by `native-tls`
+- structured logging for url and HTTP verbe
+
+### Changed
+
+- Breaking: the default TLS provider is now `rustls`, following the new `reqwest` 0.13 default. For people who still want use the native provider, a new `native-tls` features as been added.
+- some log has been downgraded from `debug` to `trace`
+
+### Fixed
+
+- `reqwest` is no longer an optional dependency anymore.
+
 ## [0.6.1] - 2024-12-12
 
 ### Fixed
@@ -178,7 +194,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release
 
-[unreleased]: https://github.com/jmgilman/rustify/compare/v0.5.4..HEAD
+[unreleased]: https://github.com/jmgilman/rustify/compare/v0.7.0..HEAD
+[0.7.0]: https://github.com/jmgilman/rustify/releases/tag/v0.7.0
+[0.6.1]: https://github.com/jmgilman/rustify/releases/tag/v0.6.1
 [0.5.4]: https://github.com/jmgilman/rustify/releases/tag/v0.5.4
 [0.5.3]: https://github.com/jmgilman/rustify/releases/tag/v0.4.4
 [0.5.2]: https://github.com/jmgilman/rustify/releases/tag/v0.5.2
